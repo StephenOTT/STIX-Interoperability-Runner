@@ -1,0 +1,22 @@
+Feature: Simple Attack Pattern Imports
+
+  Scenario: Import and validate a Attack Pattern from a third-party System
+
+    Given a STIX JSON object "/json/0_simple_object.json"
+#    Given a STIX Bundle at...
+#    When I parse the Bundle
+#    Then it should have 5 objects
+#    Given JSON provided at "POST" /scenario1
+#    When I parse it, it should be a "AttackPattern"
+#    And it's "created_by_ref" must match the producer
+#    and the property "createdAt" must have millisecond precision
+    When I parse it as STIX
+    Then it must have property "key" as type "NUMBER"
+#    Then make the object available at "GET" "/scenario1"
+#    When I receive a response at "POST" "/scenario1" it indicates the respondent has validated the object in their system and provided a updated object
+#    Then validate the response as a "AttackPattern"
+#    And the following properties must be different then the previous version
+#    | count | last_observed | created_by_ref
+
+#    and it must have a different "id"
+    Then print the object

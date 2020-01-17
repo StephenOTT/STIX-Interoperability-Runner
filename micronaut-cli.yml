@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: stix-interop-runner
+---
+testFramework: kotlintest
+sourceLanguage: kotlin
